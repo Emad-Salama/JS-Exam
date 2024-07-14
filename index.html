@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- styleSheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black ">
+    <!-- side-nav -->
+    <div class="side-nav  position-fixed top-0 d-flex min-vh-100 z-2">
+        <div class="nav-links bg-black text-white p-4 d-flex flex-column justify-content-between ">
+            <div class="links">
+                <ul class="list-unstyled ">
+                    <li><a href="#search" class="search">Search</a></li>
+                    <li><a href="#categories" class="categ">Categories</a></li>
+                    <li><a href="#area" class="zone">Area</a></li>
+                    <li><a href="#ingredients" class="ingred">Ingredients</a></li>
+                    <li><a href="#contactUs" class="contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook "></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights </p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="nav-header bg-white d-flex flex-column justify-content-between align-items-center text-black py-4 px-2">
+            <img src="images/logo.png" class="logo w-75" alt="">
+            <i class="fa-solid fa-bars fa-align-justify fa-3x"></i>
+            <!-- <i class="fa-solid fa-xmark fa-3x"></i> -->
+            <div class="icons">
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- loader -->
+    <section id="loader"
+        class="vh-100 justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0">
+        <span class="loader"></span>
+    </section>
+
+    <!-- search  -->
+    <section class="py-5 " id="search">
+        <div class="container" id="search-container">
+            <div class="form-floating d-flex flex-wrap justify-content-center align-items-end ">
+                <div class="mb-4">
+                    <input type="search" class="form-control  bg-transparent text-white" id="fullName"
+                        placeholder="Search By Name" />
+                </div>
+                <div class="mb-4">
+                    <input type="search" class="form-control bg-transparent text-white" maxlength="1" id="fLetter"
+                        placeholder="Search By First Letter" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Categories -->
+    <section class="py-5 " id="categories">
+        <div class="container">
+            <div class="row gy-4" id="categories-list">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- area -->
+    <section class="py-5 " id="area">
+        <div class="container">
+            <div class="row gy-4" id="area-list">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ingredients -->
+    <section class="py-5 " id="ingredients">
+        <div class="container">
+            <div class="row gy-4" id="ingredients-list">
+                <!-- <div class="col-lg-3">
+                    <div class="logo pointer-event text-white text-center">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>place</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti numquam repudiandae odio
+                            pariatur veniam natus quas praesentium impedit temporibus ratione?</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- contact us -->
+    <section class="py-5 " id="contactUs">
+        <div class="container ">
+            <div class="form-floating  d-flex flex-wrap justify-content-center align-items-end">
+                <div class="mb-4">
+                    <input type="text" class="form-control" id="userName" name="userName"
+                        placeholder="Enter your Name" />
+                    <span class="bg-danger-subtle d-none p-3 rounded-2 mt-2">
+                        Special characters and numbers not allowed
+                    </span>
+                </div>
+                <div class="mb-4">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" />
+                    <span class="bg-danger-subtle d-none p-3 rounded-2 mt-2">
+                        Email not valid *exemple@yyy.zzz
+                    </span>
+                </div>
+                <div class="mb-4">
+                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter your phone" />
+                    <span class="bg-danger-subtle d-none p-3 rounded-2 mt-2">
+                        Enter valid Phone Number
+                    </span>
+                </div>
+                <div class="mb-4">
+                    <input type="number" class="form-control" id="age" name="age" placeholder="Enter your Age" />
+                    <span class="bg-danger-subtle d-none  p-3 rounded-2 mt-2">
+                        Enter valid age
+                    </span>
+                </div>
+                <div class="mb-4">
+                    <input type="password" class="form-control" id="psw" name="psw" placeholder="Enter your password" />
+                    <span class="bg-danger-subtle d-none  p-3 rounded-2 mt-2">
+                        Enter valid password *Minimum eight characters, at least one letter and one number:*
+                    </span>
+                </div>
+                <div class="mb-4">
+                    <input type="password" class="form-control" id="psw_repeat" name="psw_repeat"
+                        placeholder="Repassword" />
+                    <span class="bg-danger-subtle d-none p-3 rounded-2 mt-2">
+                        Enter valid repassword
+                    </span>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-danger" id="sendBtn" disabled>Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- home -->
+    <section class="py-5" id="home">
+        <div class="container">
+            <div class="row gy-4" id="meal-list">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- get-details -->
+    <!-- <section class="py-5" id="get-details">
+        <div class="container">
+            <div class="row gy-4" id="mealData">
+                <!-- <div class="col-md-4">
+                    <div class="recipe-header">
+                        <img src="images/conan-2.jfif" alt="">
+                        <h2>Recipe Name</h2>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="recipe-details">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores atque dolor accusamus ab
+                            eligendi excepturi aut iure quo in rem dolorum ea qui totam officiis commodi, quibusdam
+                            cupiditate laudantium. Sequi?</p>
+                        <h3><strong>Zone:Egypt</strong></h3>
+                        <h3><strong>cat:beef</strong></h3>
+                        <h3><strong>Recipe:</strong></h3>
+                        <ul class="list-unstyled d-flex flex-wrap g-3">
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum dolor.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem,</li>
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem ipsum dolor sit.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum dolor.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum dolor.</li>
+                            <li class="alert alert-info p-1 m-2">Lorem, ipsum.</li>
+                        </ul>
+                        <h3><strong>Zone:</strong></h3>
+                        <div>
+                            <a href="" class="btn btn-success">Source</a>
+                            <a href="" class="btn btn-danger ">Youtube</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section> -->
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
